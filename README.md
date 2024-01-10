@@ -18,3 +18,8 @@ Aplicativos iOS possuem um padrão de UI muito diferente do Android e nos ultimo
 Resuldado do Desafio: 
 
 ![Desafio](https://github.com/MarSYs1/Angola_Province/assets/48380842/f7ddedd8-48b6-4dde-a3b7-bca12932bd75)
+
+
+Xcode 15
+Version 15.1 
+iOS 17.2
