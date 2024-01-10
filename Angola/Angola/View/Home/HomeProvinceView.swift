@@ -32,6 +32,7 @@ struct HomeProvinceView: View {
                     .padding(.bottom, 30)
                 }
             }
+            .scrollTargetLayout()
             .ignoresSafeArea()
             .navigationTitle("Home")
             .onAppear {

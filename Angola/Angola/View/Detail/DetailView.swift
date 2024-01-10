@@ -51,6 +51,7 @@ struct DetailView: View {
                 .padding(.horizontal)
             }
         }
+        .scrollTargetLayout()
         .ignoresSafeArea()
         .background(.gray.opacity(0.15))
     }
