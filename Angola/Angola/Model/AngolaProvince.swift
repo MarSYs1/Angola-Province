@@ -23,9 +23,9 @@ struct AngolaProvince: Identifiable, Codable {
         
         
         do {
-            let municipiosString = try container.decode(String.self, forKey: .municipios)
-            let municipiosData = municipiosString.data(using: .utf8) ?? Data()
-            municipios = try JSONDecoder().decode([String].self, from: municipiosData)
+            let municipalityString = try container.decode(String.self, forKey: .municipios)
+            let municipalityData = municipalityString.data(using: .utf8) ?? Data()
+            municipios = try JSONDecoder().decode([String].self, from: municipalityData)
         } catch {
             municipios = []
             print("Erro ao decodificar 'municipios': \(error)")
