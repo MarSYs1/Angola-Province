@@ -20,7 +20,7 @@ struct DetailView: View {
                 
                 VStack(alignment: .leading, spacing: 20){
                   
-                    VStack{
+                    VStack(alignment: .leading){
                         Text(province.nome)
                             .font(.largeTitle)
                             .fontWeight(.bold)
@@ -43,9 +43,9 @@ struct DetailView: View {
                     
                     GroupBoxListMunicipality(municipality: province)
                     
-                    //Text(province.siteGovernoProvincial)
                     
                     SourcesLinksSite(linkSiteProvince: province)
+                        .padding(.bottom, 40)
                     
                 }
                 .padding(.horizontal)
@@ -56,6 +56,6 @@ struct DetailView: View {
     }
 }
 
-#Preview {
+/*#Preview {
     DetailView(province: MockData.devPreview.provinceInAngola[0])
-}
+} */

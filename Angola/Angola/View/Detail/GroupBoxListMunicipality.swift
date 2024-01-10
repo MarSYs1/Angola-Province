@@ -30,11 +30,11 @@ struct GroupBoxListMunicipality: View {
     }
 }
 
-#Preview {
+/*#Preview {
     GroupBoxListMunicipality(municipality: MockData.devPreview.provinceInAngola[0])
 }
 
 #Preview {
     GroupBoxListMunicipality(municipality: MockData.devPreview.provinceInAngola[0])
         .preferredColorScheme(.dark)
-}
+} */

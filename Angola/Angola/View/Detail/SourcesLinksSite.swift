@@ -28,6 +28,6 @@ struct SourcesLinksSite: View {
     }
 }
 
-#Preview {
+/*#Preview {
     SourcesLinksSite(linkSiteProvince: MockData.instance.provinceInAngola[0])
-}
+} */

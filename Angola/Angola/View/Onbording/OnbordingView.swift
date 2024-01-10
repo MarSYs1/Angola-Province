@@ -11,7 +11,7 @@ struct OnbordingView: View {
     
     @ObservedObject var viewModelGoToHome: ToComeInHome
    
-    @StateObject var viewModelProvince = ProvinceAngolaViewModel()
+    @StateObject var viewModelProvince = ProvinceViewModel()
     
     var body: some View {
         ZStack{

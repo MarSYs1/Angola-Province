@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct AngolaProvince: Identifiable, Codable {
-    let id, nome, fundada, capital: String
-    let area, prefixoTelefonico: String
-    let siteGovernoProvincial: String
+    let id, nome, fundada, capital, area, prefixoTelefonico, siteGovernoProvincial: String
     let municipios: [String]
 
     enum CodingKeys: String, CodingKey {
@@ -19,4 +17,29 @@ struct AngolaProvince: Identifiable, Codable {
         case siteGovernoProvincial = "site_governo_provincial"
         case municipios
     }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        
+        do {
+            let municipiosString = try container.decode(String.self, forKey: .municipios)
+            let municipiosData = municipiosString.data(using: .utf8) ?? Data()
+            municipios = try JSONDecoder().decode([String].self, from: municipiosData)
+        } catch {
+            municipios = []
+            print("Erro ao decodificar 'municipios': \(error)")
+        }
+
+        id = try container.decode(String.self, forKey: .id)
+        nome = try container.decode(String.self, forKey: .nome)
+        fundada = try container.decode(String.self, forKey: .fundada)
+        capital = try container.decode(String.self, forKey: .capital)
+        area = try container.decode(String.self, forKey: .area)
+        prefixoTelefonico = try container.decode(String.self, forKey: .prefixoTelefonico)
+        siteGovernoProvincial = try container.decode(String.self, forKey: .siteGovernoProvincial)
+    }
 }
+
+
+

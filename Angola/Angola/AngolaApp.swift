@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct AngolaApp: App {
     
-    @StateObject var viewModelProvince = ProvinceAngolaViewModel()
+    @StateObject var viewModelProvince = ProvinceViewModel()
     
     var body: some Scene {
         WindowGroup {

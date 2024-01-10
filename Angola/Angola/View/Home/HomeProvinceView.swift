@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeProvinceView: View {
     
-    @EnvironmentObject var viewModelProvince: ProvinceAngolaViewModel
+    @ObservedObject var viewModel = ProvinceViewModel()
     
    
     var body: some View {
@@ -20,7 +20,7 @@ struct HomeProvinceView: View {
                     RectangleCustom(width: 400, height: 322, image: imageWonder)
                            
                     LazyVStack{
-                        ForEach(viewModelProvince.allProvinceAngola){ province in
+                        ForEach(viewModel.allProvinceAngola){ province in
                             NavigationLink {
                                 DetailView(province: province)
                             } label: {
@@ -29,10 +29,14 @@ struct HomeProvinceView: View {
                             }
                         }
                     }
+                    .padding(.bottom, 30)
                 }
             }
             .ignoresSafeArea()
             .navigationTitle("Home")
+            .onAppear {
+                viewModel.dataService.getProvince()
+             }
             .toolbar(.hidden)
             .background(.gray.opacity(0.10))
         }
@@ -41,5 +45,4 @@ struct HomeProvinceView: View {
 
 #Preview {
     HomeProvinceView()
-        .environmentObject(ProvinceAngolaViewModel())
 }

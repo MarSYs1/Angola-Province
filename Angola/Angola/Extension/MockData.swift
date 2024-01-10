@@ -16,7 +16,8 @@ class MockData{
     
     let provinceInAngola: [AngolaProvince] = [
         
-        AngolaProvince(id: "3da181d3-bee0-4aa0-ab10-d37c78b911f4",
+        
+       /* AngolaProvince(id: "3da181d3-bee0-4aa0-ab10-d37c78b911f4",
                        nome: "Bengo",
                        fundada: "28 de Fevereiro de 1919",
                        capital: "Caxito",
@@ -54,7 +55,7 @@ class MockData{
                        siteGovernoProvincial: "https://www.huambo.gov.ao",
                        municipios: ["Bailundo", "Cachiungo", "Caála", "Ecunha",
                                     "Huambo", "Londuimbali", "Longonjo", "Mungo",
-                                    "Chicala-Choloanga", "Chinjenje", "Ucuma"])
+                                    "Chicala-Choloanga", "Chinjenje", "Ucuma"]) */
     ]
     
 }
@@ -65,3 +66,6 @@ extension MockData{
         return MockData.instance
     }
 }
+ 
+ 
+
